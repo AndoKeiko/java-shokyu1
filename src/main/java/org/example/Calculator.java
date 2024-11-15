@@ -17,7 +17,8 @@ public class Calculator {
         result =  num1 / num2;
         break;
       default:
-        break;
+        System.out.println("+, -, *, /　のいずれかを選択してください");
+        return Integer.MIN_VALUE;
     }
     return result;
   }

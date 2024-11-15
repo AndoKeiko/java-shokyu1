@@ -23,9 +23,15 @@ public class Main {
 
     int result = calculator.calulate(num1, String.valueOf(operator), num2);
 
-    printer.printCalculator(result);
-
+    if (result == Integer.MIN_VALUE) {
+     System.out.println("無効な演算子が入力されました。再度入力してください。");
+    } else {
+     printer.printCalculator(result);
+    }
+     System.out.println();
    } catch (Exception e) {
+    System.out.println("エラーが発生しました。入力を再確認してください。");
+    System.out.println();
     scanner.nextLine();
    }
   }
